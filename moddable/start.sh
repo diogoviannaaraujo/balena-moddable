@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "STARTING XVFB"
-Xvfb :1 -screen 0 1280x720x24
+Xvfb :1 -screen 0 1280x720x24 &
 
 if [ -z ${VNC_PASS} ]; then
   echo "STARTING VNC WITHOUT PASSWORD"
