@@ -25,6 +25,9 @@ RUN install_packages x11vnc \
     gperf \
     libncurses5-dev
 
+# Link python
+RUN ln -s /usr/bin/python3 /usr/bin/python
+
 ENV MODDABLE $HOME/moddable
 WORKDIR $HOME
 RUN git clone https://github.com/Moddable-OpenSource/moddable.git
