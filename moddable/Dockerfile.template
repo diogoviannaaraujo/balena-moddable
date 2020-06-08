@@ -26,6 +26,7 @@ RUN install_packages x11vnc \
     libncurses5-dev
 
 # Link python
+RUN rm /usr/bin/python
 RUN ln -s /usr/bin/python3 /usr/bin/python
 
 ENV MODDABLE $HOME/moddable
