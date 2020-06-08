@@ -1,6 +1,6 @@
 FROM balenalib/%%BALENA_MACHINE_NAME%%-debian:stretch-run
 
-ENV $HOME /root
+ENV HOME /root
 
 RUN install_packages x11vnc \
     x11-utils \
