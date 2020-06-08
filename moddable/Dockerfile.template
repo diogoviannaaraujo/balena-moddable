@@ -52,10 +52,10 @@ RUN wget https://dl.espressif.com/dl/xtensa-esp32-elf-linux-armel-1.22.0-87-gb57
     tar xvzf xtensa-esp32-elf-linux-armel-1.22.0-87-gb57bad3-5.2.0.tar.gz
 RUN ls $HOME/esp32/xtensa-esp32-elf/bin
 
-# Build Folder
-RUN mkdir /source
-VOLUME ["/source"]
+WORKDIR /usr/src/app
 
-WORKDIR /source
+COPY . .
+
+ADD supervisor /etc/supervisor
 
 CMD ["bash", "start.sh"]
