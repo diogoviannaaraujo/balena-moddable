@@ -56,6 +56,4 @@ WORKDIR /usr/src/app
 
 COPY . .
 
-ADD supervisor /etc/supervisor
-
 CMD ["bash", "start.sh"]
