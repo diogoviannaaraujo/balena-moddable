@@ -2,6 +2,6 @@ version: '2'
 services:
   moddable:
     restart: always
-    build: ./modable
+    build: ./moddable
     ports:
       - "8080:5900"
