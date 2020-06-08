@@ -1,0 +1,7 @@
+version: '2'
+services:
+  vnc-app:
+    restart: always
+    build: ./vnc-app
+    ports:
+      - "8080:5900"
