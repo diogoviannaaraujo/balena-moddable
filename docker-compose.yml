@@ -1,6 +1,7 @@
 version: '2'
 services:
   moddable:
+    privileged: true
     restart: always
     build: ./moddable
     ports:
