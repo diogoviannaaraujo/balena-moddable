@@ -24,6 +24,7 @@ RUN install_packages x11vnc \
     ninja-build \
     gperf \
     libncurses5-dev \
+    lxde-core \
     lxterminal
 
 # Link python
