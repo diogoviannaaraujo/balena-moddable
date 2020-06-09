@@ -24,7 +24,7 @@ RUN install_packages x11vnc \
     ninja-build \
     gperf \
     libncurses5-dev \
-    gnome-terminal
+    lxterminal
 
 # Link python
 RUN rm /usr/bin/python
