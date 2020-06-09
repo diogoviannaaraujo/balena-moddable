@@ -23,7 +23,8 @@ RUN install_packages x11vnc \
     cmake \
     ninja-build \
     gperf \
-    libncurses5-dev
+    libncurses5-dev \
+    gnome-terminal
 
 # Link python
 RUN rm /usr/bin/python
@@ -51,6 +52,7 @@ WORKDIR $HOME/esp32
 RUN wget https://dl.espressif.com/dl/xtensa-esp32-elf-linux-armel-1.22.0-87-gb57bad3-5.2.0.tar.gz && \
     tar xvzf xtensa-esp32-elf-linux-armel-1.22.0-87-gb57bad3-5.2.0.tar.gz
 RUN ls $HOME/esp32/xtensa-esp32-elf/bin
+
 
 WORKDIR /usr/src/app
 
