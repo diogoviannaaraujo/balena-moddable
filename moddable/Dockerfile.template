@@ -1,4 +1,4 @@
-FROM balenalib/%%BALENA_MACHINE_NAME%%-debian:buster-run
+FROM balenalib/%%BALENA_MACHINE_NAME%%-debian:buster-build
 
 ENV UDEV 1
 
@@ -23,7 +23,6 @@ RUN install_packages \
     bison \
     gperf \
     python \
-    python-dev \
     python-pip \
     python-setuptools \
     python-serial \
