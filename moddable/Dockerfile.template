@@ -52,8 +52,8 @@ ENV PATH $PATH:$IDF_PATH/tools
 # Xtensa toolchain
 ENV PATH $PATH:$HOME/esp32/xtensa-esp32-elf/bin
 WORKDIR $HOME/esp32
-RUN wget https://dl.espressif.com/dl/xtensa-esp32-elf-gcc8_2_0-esp-2020r1-linux-armel.tar.gz && \
-    tar xvzf xtensa-esp32-elf-gcc8_2_0-esp-2020r1-linux-armel.tar.gz
+RUN wget https://dl.espressif.com/dl/xtensa-esp32-elf-linux-armel-1.22.0-87-gb57bad3-5.2.0.tar.gz && \
+    tar xvzf xtensa-esp32-elf-linux-armel-1.22.0-87-gb57bad3-5.2.0.tar.gz
 RUN ls $HOME/esp32/xtensa-esp32-elf/bin
 
 
