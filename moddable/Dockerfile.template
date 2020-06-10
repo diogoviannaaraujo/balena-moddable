@@ -22,7 +22,9 @@ RUN install_packages \
     flex \
     bison \
     gperf \
+    openssl-dev \
     python \
+    python-dev \
     python-pip \
     python-setuptools \
     python-serial \
