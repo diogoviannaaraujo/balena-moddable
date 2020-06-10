@@ -1,14 +1,17 @@
-FROM balenalib/%%BALENA_MACHINE_NAME%%-debian:stretch-run
+FROM balenalib/%%BALENA_MACHINE_NAME%%-debian:buster-run
 
 ENV UDEV 1
 
 ENV HOME /root
 
-RUN install_packages x11vnc \
+RUN install_packages \
+    x11vnc \
     x11-utils \
     xvfb \
-    wmctrl \
-    supervisor \
+    lxde-core \
+    lxterminal
+
+RUN install_packages \
     libgtk-3-dev \
     git \
     gcc \
@@ -25,9 +28,7 @@ RUN install_packages x11vnc \
     cmake \
     ninja-build \
     gperf \
-    libncurses5-dev \
-    lxde-core \
-    lxterminal
+    libncurses5-dev
 
 # Link python
 RUN rm /usr/bin/python

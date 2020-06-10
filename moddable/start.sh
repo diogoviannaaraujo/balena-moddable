@@ -7,3 +7,4 @@ x11vnc -shared -display :1 -oa /var/log/x11vnc.log &
 sleep 30
 echo "STARTING LXDE"
 DISPLAY=:1 startlxde
+echo "DONE"
