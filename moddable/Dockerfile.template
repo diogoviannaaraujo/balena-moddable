@@ -23,6 +23,7 @@ RUN install_packages \
     bison \
     gperf \
     python \
+    python-dev \
     python-pip \
     python-setuptools \
     python-serial \
