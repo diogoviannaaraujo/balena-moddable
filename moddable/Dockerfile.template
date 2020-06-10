@@ -23,12 +23,13 @@ RUN install_packages \
     python3-setuptools \
     python3-serial \
     wget \
+    make \
     flex \
     bison \
     cmake \
     ninja-build \
     gperf \
-    libncurses5-dev
+    libncurses-dev
 
 # Link python
 RUN ln -s /usr/bin/python3 /usr/bin/python
