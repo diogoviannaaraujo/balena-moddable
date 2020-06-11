@@ -53,7 +53,6 @@ RUN wget https://dl.espressif.com/dl/xtensa-esp32-elf-linux-armel-1.22.0-87-gb57
     tar xvzf xtensa-esp32-elf-linux-armel-1.22.0-87-gb57bad3-5.2.0.tar.gz
 RUN ls $HOME/esp32/xtensa-esp32-elf/bin
 
-
 WORKDIR /root/moddable/examples/helloworld/
 
 CMD ["mcconfig", "-d", "-m", "-p", "esp32"]
