@@ -54,8 +54,6 @@ RUN wget https://dl.espressif.com/dl/xtensa-esp32-elf-linux-armel-1.22.0-87-gb57
 RUN ls $HOME/esp32/xtensa-esp32-elf/bin
 
 
-WORKDIR /usr/src/app
+WORKDIR /root/moddable/examples/helloworld/
 
-COPY . .
-
-CMD ["bash", "start.sh"]
+CMD ["mcconfig", "-d", "-m", "-p esp32"]
