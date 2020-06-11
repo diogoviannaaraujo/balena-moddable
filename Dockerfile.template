@@ -56,4 +56,4 @@ RUN ls $HOME/esp32/xtensa-esp32-elf/bin
 
 WORKDIR /root/moddable/examples/helloworld/
 
-CMD ["mcconfig", "-d", "-m", "-p esp32"]
+CMD ["mcconfig", "-d", "-m", "-p", "esp32"]
