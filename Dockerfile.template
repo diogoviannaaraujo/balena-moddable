@@ -33,10 +33,7 @@ RUN install_packages \
 ENV MODDABLE $HOME/moddable
 WORKDIR $HOME
 RUN git clone https://github.com/velabikes/moddable.git
-WORKDIR $HOME/moddable/build/makefiles/lin
-RUN make
 ENV PATH $PATH:$MODDABLE/build/bin/lin/release
-RUN make install
 
 # Install ESP-IDF
 ENV IDF_PATH $HOME/esp32/esp-idf
@@ -53,6 +50,11 @@ RUN wget https://dl.espressif.com/dl/xtensa-esp32-elf-linux-armel-1.22.0-87-gb57
     tar xvzf xtensa-esp32-elf-linux-armel-1.22.0-87-gb57bad3-5.2.0.tar.gz
 RUN ls $HOME/esp32/xtensa-esp32-elf/bin
 
-WORKDIR /root/moddable/examples/helloworld/
+# Install node
+RUN curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
+RUN install_packages nodejs
 
-CMD ["mcconfig", "-d", "-m", "-p", "esp32"]
+WORKDIR /root
+COPY . .
+
+CMD ["bash", "start.sh"]
