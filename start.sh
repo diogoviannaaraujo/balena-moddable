@@ -1,4 +1,4 @@
 #!/bin/bash
 
-sleep 86400
+sleep 886400
 echo "DONE"
